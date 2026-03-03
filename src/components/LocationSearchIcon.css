@@ -1,0 +1,102 @@
+.location-search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(45, 106, 45, 0.15);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: fit-content;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.location-search-container:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 40px 0 rgba(45, 106, 45, 0.25);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.icon-wrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary, #2D6A2D), var(--primary-dark, #1B431B));
+  border-radius: 50%;
+  color: white;
+  box-shadow: 0 10px 20px -5px rgba(45, 106, 45, 0.4);
+  transition: all 0.3s ease;
+}
+
+.location-search-container:hover .icon-wrapper {
+  transform: rotate(10deg);
+  box-shadow: 0 15px 25px -5px rgba(45, 106, 45, 0.5);
+}
+
+.pulse-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--primary, #2D6A2D);
+  opacity: 0.3;
+  z-index: -1;
+  animation: pulse 2s infinite ease-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.search-label {
+  font-family: var(--font, 'Inter', sans-serif);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--dark, #000000);
+  letter-spacing: -0.01em;
+}
+
+.search-subtext {
+  font-family: var(--font, 'Inter', sans-serif);
+  font-size: 0.85rem;
+  color: var(--gray, #000000);
+  margin-top: -6px;
+}
+
+.shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent);
+  transform: skewX(-25deg);
+  transition: 0.5s;
+}
+
+.location-search-container:hover .shine {
+  left: 150%;
+  transition: 0.8s;
+}
