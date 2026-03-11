@@ -1,78 +1,169 @@
-# 🖥 Hospital Appointment System - Frontend
+# Hospital Management System – Frontend
 
-This is the **frontend part** of the Hospital Appointment System built using **React.js**.
-It provides the user interface for patients to interact with the hospital appointment system.
+## 📌 Project Overview
 
-The frontend communicates with the backend API to manage appointments and hospital data.
+The **Hospital Management System Frontend** is built using **React.js** and provides an interactive user interface for patients, doctors, and administrators.
+
+The application allows users to:
+
+* Find nearby hospitals based on location
+* Book doctor appointments
+* Donate blood or request blood
+* Use AI to check symptoms
+* Manage hospital activities through dedicated dashboards
+
+This frontend communicates with the backend API built using **Node.js, Express, and MongoDB**.
 
 ---
 
-# 🚀 Technologies Used
+## 🚀 Tech Stack
 
 * React.js
-* JavaScript
-* CSS
+* React Router
 * Axios
-* Vite (or Create React App)
+* Bootstrap / Tailwind CSS
+* Google Maps API / Location API
+* Context API / Redux (optional)
+* AI API for symptoms checker
 
 ---
 
-# ✨ Features
+## 📂 Folder Structure
 
-* User friendly interface
-* Book hospital appointments
-* View appointment details
-* Connects to backend REST API
-* Responsive design
-
----
-
-# 📂 Project Structure
-
+```
 src/
-components/
-pages/
-App.jsx
-main.jsx
+ ├── components/
+ │     ├── Navbar.js
+ │     ├── Footer.js
+ │     └── HospitalCard.js
+ │
+ ├── pages/
+ │     ├── Home.js
+ │     ├── Login.js
+ │     ├── Register.js
+ │     ├── HospitalsNearby.js
+ │     ├── AppointmentBooking.js
+ │     ├── BloodDonation.js
+ │     ├── SymptomChecker.js
+ │     ├── PatientDashboard.js
+ │     ├── DoctorDashboard.js
+ │     └── AdminDashboard.js
+ │
+ ├── services/
+ │     └── api.js
+ │
+ ├── context/
+ │     └── AuthContext.js
+ │
+ ├── App.js
+ └── index.js
+```
 
 ---
 
-# ⚙️ Installation
+## ✨ Features
 
-Clone the repository
+### 👤 Patient Features
 
-git clone https://github.com/ashokkumar2005/hospital-appointment-mern.git
+* User registration and login
+* Find nearby hospitals using location
+* Book doctor appointments
+* View appointment history
+* Blood donation and blood request
+* AI symptom checker
 
-Go to frontend folder
+### 🩺 Doctor Features
 
+* Doctor login
+* View patient appointments
+* Update appointment status
+* Manage availability
+
+### 🛠 Admin Features
+
+* Manage hospitals
+* Manage doctors
+* View system analytics
+* Manage blood donation requests
+
+---
+
+## 📍 Nearby Hospital Finder
+
+The system uses **Geolocation API** to detect the user's location and display nearby hospitals using maps.
+
+---
+
+## 🤖 AI Symptom Checker
+
+Users can enter symptoms and get possible health suggestions using AI.
+
+Example:
+
+```
+Input: Fever, headache
+Output: Possible flu or viral infection
+Suggestion: Consult a doctor
+```
+
+---
+
+## 🔧 Installation
+
+### 1️⃣ Clone the Repository
+
+```
+git clone https://github.com/yourusername/hospital-management-system.git
+```
+
+### 2️⃣ Navigate to Frontend
+
+```
 cd frontend
+```
 
-Install dependencies
+### 3️⃣ Install Dependencies
 
+```
 npm install
+```
 
-Run the development server
+### 4️⃣ Start the React App
 
-npm run dev
+```
+npm start
+```
 
-The application will run on:
+The frontend will run on:
 
-http://localhost:5173
-
----
-
-# 🔗 API Connection
-
-This frontend communicates with the backend server running at:
-
-http://localhost:5000
-
-Make sure the backend server is running before using the application.
+```
+http://localhost:3000
+```
 
 ---
 
-# 👨‍💻 Author
+## 🌐 API Connection
 
-Ashok Kumar
-GitHub: https://github.com/ashokkumar2005
+Example API call:
 
+```javascript
+axios.get("http://localhost:5000/api/hospitals")
+```
+
+---
+
+## 🔮 Future Improvements
+
+* Online payment for appointments
+* Video consultation with doctors
+* Real-time chat with hospital support
+* Health record storage
+* Emergency ambulance request
+
+---
+
+## 👨‍💻 Author
+
+Ashok Sam
+
+Full Stack Developer (MERN)
