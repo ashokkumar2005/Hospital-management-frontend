@@ -1,4 +1,4 @@
-# Hospital Management System – Frontend
+# 🏥 Hospital Management System – Frontend
 
 ## 📌 Project Overview
 
@@ -90,7 +90,7 @@ src/
 
 ## 📍 Nearby Hospital Finder
 
-The system uses **Geolocation API** to detect the user's location and display nearby hospitals using maps.
+The system uses the **Geolocation API** to detect the user's location and display nearby hospitals using maps.
 
 ---
 
@@ -98,12 +98,12 @@ The system uses **Geolocation API** to detect the user's location and display ne
 
 Users can enter symptoms and get possible health suggestions using AI.
 
-Example:
+### Example:
 
 ```
-Input: Fever, headache
-Output: Possible flu or viral infection
-Suggestion: Consult a doctor
+Input: Fever, headache  
+Output: Possible flu or viral infection  
+Suggestion: Consult a doctor  
 ```
 
 ---
@@ -113,7 +113,7 @@ Suggestion: Consult a doctor
 ### 1️⃣ Clone the Repository
 
 ```
-git clone https://github.com/yourusername/hospital-management-system.git
+git clone https://github.com/ashokkumar2005/hospital-management-system.git
 ```
 
 ### 2️⃣ Navigate to Frontend
@@ -164,6 +164,5 @@ axios.get("http://localhost:5000/api/hospitals")
 
 ## 👨‍💻 Author
 
-Ashok Sam
-
+**Ashok Sam**
 Full Stack Developer (MERN)
